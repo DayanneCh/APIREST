@@ -19,7 +19,7 @@ router.get('/:equipomedicoId', async (req,res) =>{ //llama por identificador
     }  
 });
 router.post('/', async (req,res) => { //crear un post
-    const equipomedico = new Post ({
+    const equipomedico = new Equipomedico ({
         placa:req.body.placa,
         equipo:req.body.equipo,
         marca:req.body.marca,
