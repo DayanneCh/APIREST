@@ -20,8 +20,10 @@ router.get('/:postId', async (req,res) =>{ //llama por identificador
 });
 router.post('/', async (req,res) => { //crear un post
     const post = new Post ({
-        title:req.body.title,
-        description:req.body.description,
+        placa:req.body.placa,
+        marca:req.body.marca,
+        modelo:req.body.modelo,
+        serie:req.body.serie,
     });
     try {
         const savedPost = await post.save(); //guardar el nuevo post
@@ -33,7 +35,7 @@ router.post('/', async (req,res) => { //crear un post
 router.patch('/:postId', async (req,res) => { // actualizar un post
     try {
     const updatedPost = await Post.updateOne ( 
-        {_id: req.params.postId }, { $set: { title: req.body.title, description: req.body.description }});
+        {_id: req.params.postId }, { $set: { placa: req.body.placa, marca: req.body.marca, modelo: req.body.modelo, serie: req.body.serie }});
         res.json(updatedPost);
     } catch (err) {
         res.json({ message: err.message});

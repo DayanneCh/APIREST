@@ -1,11 +1,19 @@
 const mongoose = require('mongoose');
 const PostSchema = mongoose.Schema({
 
-title: {
+placa: {
     type:String,
     required:true
 },
-description: {
+marca: {
+    type:String,
+    required: true
+},
+modelo: {
+    type:String,
+    required: true
+},
+serie: {
     type:String,
     required: true
 },
