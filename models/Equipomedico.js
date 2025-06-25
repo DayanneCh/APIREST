@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); //conexion a una base de datos no relacional en la nube
 const EquipomedicoSchema = mongoose.Schema({
 
 placa: {
